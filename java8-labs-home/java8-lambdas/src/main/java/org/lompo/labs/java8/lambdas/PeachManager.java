@@ -26,6 +26,11 @@ public class PeachManager {
 		
 	}
 	
+	
+	public List<Peach> getPeaches() {
+		return peaches;
+	}
+	
 	public void printPeaches() {
 		System.out.println(peaches);
 	}
