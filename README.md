@@ -23,7 +23,7 @@ The following aspects of java 8 enhancements are covered in the examples of the 
 <li>Using ParrallelStream</li>
 <li>Using Optional to reduce NullPointerExceptions</li>
 <li>Using pattern matching</li>
-<li style='background-color:gray'>Passing code with behaviour parameterization</li>
+<li>Passing code with behaviour parameterization (Done!!!)</li>
 <li>Deep diving into lambda expressions</li>
 <li>Deep diving into streams</li>
 <li>Deep diving into parrallel data processing and the performance impact</li>
