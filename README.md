@@ -24,7 +24,18 @@ The following aspects of java 8 enhancements are covered in the examples of the 
 <li>Using Optional to reduce NullPointerExceptions</li>
 <li>Using pattern matching</li>
 <li>Passing code with behaviour parameterization (Done!!!)</li>
-<li>Deep diving into lambda expressions</li>
+<li>
+    <span>
+      Deep diving into lambda expressions
+      <br/>
+      <hr/>
+      <ul>
+         <li>Deep diving into functional interfaces (Done!!!)</li>
+         <li>An early look at the execute around patter (Done!!!)</li>
+      </ul>
+      
+    </span>
+</li>
 <li>Deep diving into streams</li>
 <li>Deep diving into parrallel data processing and the performance impact</li>
 <li>more soon...</li>
