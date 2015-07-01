@@ -31,7 +31,15 @@ The following aspects of java 8 enhancements are covered in the examples of the 
       <hr/>
       <ul>
          <li>Deep diving into functional interfaces (Done!!!)</li>
-         <li>An early look at the execute around patter (Done!!!)</li>
+         <li>An early look at the execute around pattern (Done!!!)</li>
+         <li>More functional interfaces (Done!!!)</li>
+         <br/>
+         <hr/>
+         <ul>
+            <li>Consumer interface</li>
+            <li>Function interface</li>
+            <li>Predicate interface</li>
+         </ul>
       </ul>
       
     </span>
