@@ -43,7 +43,7 @@ The following aspects of java 8 enhancements are covered in the examples of the 
          <li>Type checking (see an illustration <a href='https://github.com/alainlompo/java-8-focus-labs/blob/master/doc/lambda_type_checking.png'>here</a>)(Done!!!)</li>
          <li>Type inference(Done!!!)</li>
          <li>Method refrence(Done!!!)</li>
-         <li>Constructor refrence(Done!!!)</li>
+         <li>Constructor refrence (some examples using BiFunction and BePredicate) (Done!!!)</li>
       </ul>
       
     </span>
