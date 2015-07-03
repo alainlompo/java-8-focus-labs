@@ -25,6 +25,18 @@ public class Peach {
 	public String toString() {
 		return "[Color: " + color +", weight: " + weight + "]";
 	}
+	public Peach() {
+		super();
+		// TODO Auto-generated constructor stub
+		this.color = "Blue";
+		this.weight = 200;
+	}
+	public Peach(int weight) {
+		super();
+		this.weight = weight;
+	}
+	
+	
 	
 	
 
