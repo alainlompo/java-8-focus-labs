@@ -34,6 +34,7 @@ public class Peach {
 	public Peach(int weight) {
 		super();
 		this.weight = weight;
+		this.color = "green";
 	}
 	
 	

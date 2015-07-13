@@ -12,6 +12,8 @@ public class ConstructorReferenceWithFunction {
 	// Equivalent lambda expression
 	public static final Function<Integer, Peach> PEACH_FACTORY = (w) -> new Peach(w);
 	
+	public static final Function<String, Peach> PEACH_SKIN_FACTORY = (color) -> new Peach(color,200);
+	
 	public static Peach getWeightyPeach(int desiredWeight) {
 		return GOOD_PEACH_FACTORY.apply(desiredWeight);
 	}
