@@ -1,5 +1,7 @@
 package org.lompo.labs.java8.lambdas.streams.filtering;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 import java.util.function.Function;
 
@@ -41,7 +43,10 @@ public class HeavyWords {
 		.forEach(System.out::println);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException {
+		
+		//InetAddress iA = InetAddress.getByName("104.83.229.110");
+		
 		display(
 				toWordInfos("People who live in glass houses should not throw stones.")
 				);
