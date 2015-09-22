@@ -24,8 +24,23 @@ public class MapReduce {
 		
 	}
 	
+	
+	public static int getNumberOfGradesSuperiorTo(int minimum) {
+		List<Grade> gradesList = Grade.getDemoGrades(10);
+		return
+		gradesList
+		.stream()
+		.filter(g -> g.getGrade() > minimum)
+		.map(g -> 1)
+		.reduce(0, (a,b) -> a+b);
+	}
+	
 	public static void main(String[] args) {
+		
 		doMapReduceDemo();
+		
+		System.out.println("In a randomly generated grades " +getNumberOfGradesSuperiorTo(10) + " among 10 were > 10" )  ;
+		
 	}
 
 }
