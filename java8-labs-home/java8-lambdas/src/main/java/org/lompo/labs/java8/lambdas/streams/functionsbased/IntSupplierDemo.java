@@ -27,11 +27,37 @@ public class IntSupplierDemo {
 		return result;
 	}
 	
+	
+	public static void  customSuiteStream(int limit) {
+		IntSupplier supplier = new IntSupplier() {
+			private int prev = 0;
+			private int cur = 1;
+			private int sign = -1;
+			public int getAsInt() {
+				int oldPrev = this.prev;
+				int nextVal = this.cur + sign * this.prev;
+				sign *= -1;
+				this.prev = this.cur;
+				this.cur = nextVal;
+				return oldPrev;
+			}
+			
+		};
+		
+		IntStream.generate(supplier).limit(limit).forEach(System.out::println);
+		
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		IntStream iS = getRandomIntStream();
 		
 		iS.limit(20)
 		.forEach(System.out::println);
+		
+		System.out.println("Now a function F(n) = F(n-1) + (-1^n)*F(n-2)... 20 first images...");
+		customSuiteStream(100);
 	}
 
 }
