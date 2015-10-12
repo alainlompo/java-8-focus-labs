@@ -5,13 +5,14 @@ import org.lompo.labs.java8.lambdas.streams.reducing.TransactionAmountComparator
 import org.lompo.labs.java8.lambdas.streams.reducing.TransactionUtils;
 
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.Map;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
 import static java.util.stream.Collectors.*;
-import static java.util.stream.Collectors.*;
+
 
 public class CollectingDemos {
 	public static Map<Integer, List<Transaction>> getTransactionsByYear(List<Transaction> source) {
@@ -19,6 +20,17 @@ public class CollectingDemos {
 				source.stream()
 				.collect(groupingBy(Transaction::getYear));
 		
+	}
+	
+	
+	public static void printAllYears(List<Transaction> source) {
+		String yearsStr
+		= source.stream()
+		
+		.map(t -> t.getYear() + " ")
+		.distinct()
+		.collect(joining());
+		System.out.println( yearsStr);
 	}
 	
 	public static Transaction getBiggestTransaction(List<Transaction> source) {
@@ -33,6 +45,14 @@ public class CollectingDemos {
 		
 		return null;
 		
+	}
+	
+	
+	public static void printStreamStats(List<Transaction> source) {
+		DoubleSummaryStatistics stats =
+				source.stream()
+				.collect(summarizingDouble(Transaction::getAmount));
+		System.out.println(stats);
 	}
 	
 	public static double getTotalAmountOfAllTransactions(List<Transaction> source) {
@@ -72,6 +92,13 @@ public class CollectingDemos {
 		System.out.println("The total amount of all transactions is: " + getTotalAmountOfAllTransactions(transactions));
 		System.out.println();
 		System.out.println("The average transaction amount is:..." + getAverageAmountOfATransaction(transactions));
+		System.out.println();
+		System.out.println("More summary stats:");
+		System.out.println("===================");
+		printStreamStats(transactions);
+		System.out.println("The years we have made business:");
+		System.out.println("================================");
+		printAllYears(transactions);
 	}
 
 }
