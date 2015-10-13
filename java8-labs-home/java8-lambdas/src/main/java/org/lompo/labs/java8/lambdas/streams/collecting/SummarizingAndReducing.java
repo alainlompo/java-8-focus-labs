@@ -10,6 +10,38 @@ import org.lompo.labs.java8.lambdas.streams.reducing.TransactionUtils;
 
 public class SummarizingAndReducing {
 	
+	
+	
+	public static void printTotalTransactionsAmountWithMapToDouble(List<Transaction> source) {
+		double totalAmount 
+		= source.stream()
+		.mapToDouble(Transaction::getAmount)
+		.sum();
+		System.out.println("The total amount of all transactions (using mapToDouble) is...."+ totalAmount);
+	}
+	
+	public static void printTotalTransactionsAmountWithMapReduce(List<Transaction> source) {
+		double totalAmount
+		= source.stream()
+		.map(Transaction::getAmount)
+		.reduce(Double::sum)
+		.get();
+		
+		System.out.println("The total amount of all transactions (via map reduce) is...." + totalAmount);
+	}
+	
+	public static void printTotalTransactionsAmountWithDoubleSum(List<Transaction> source) {
+		double totalAmount 
+		= source.stream()
+		.collect(reducing(
+				0.0D,
+				Transaction::getAmount,
+				Double::sum
+				));
+		
+		System.out.println("The total amount of all transactions (via double sum... " + totalAmount);
+	}
+	
 	public static void printTotalTransactionsAmount(List<Transaction> source) {
 		double totalAmount
 		= source.stream()
@@ -41,6 +73,12 @@ public class SummarizingAndReducing {
 		printTotalTransactionsAmount(transactions);
 		System.out.println();
 		printBiggestTransaction(transactions);
+		System.out.println();
+		printTotalTransactionsAmountWithDoubleSum(transactions);
+		System.out.println();
+		printTotalTransactionsAmountWithMapReduce(transactions);
+		System.out.println();
+		printTotalTransactionsAmountWithMapToDouble(transactions);
 		
 		
 		
