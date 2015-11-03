@@ -19,12 +19,25 @@ public class GenericPredicatesUtils<T> {
 		return !isNotNull(t);
 	}
 	
+	/**
+	 * 
+	 * @param t: the instance of the class we are checking
+	 * @param q: an instance of a class we are checkin against
+	 * @return
+	 */
 	public <Q> boolean  isInstanceOf (T t, Q q) {
 		
 		Class tClass = t.getClass();
 		return tClass.isInstance(q);
 	}
 	
+	/**
+	 * Will filter a list of elements according to a specific given predicate
+	 * Any element that successfully passes the test of the predicate will be selected
+	 * @param elements
+	 * @param assessor
+	 * @return
+	 */
 	public static <T> List<T> filter(List<T> elements, Predicate<T> assessor) {
 		List<T> result = new ArrayList<T>();
 		for (T element: elements) {

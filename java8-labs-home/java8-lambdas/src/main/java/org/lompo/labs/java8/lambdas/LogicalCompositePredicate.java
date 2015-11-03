@@ -3,6 +3,12 @@ package org.lompo.labs.java8.lambdas;
 import java.util.function.Predicate;
 
 
+/**
+ * A composite predicate that implements logical operators
+ * @author LOMPO
+ *
+ * @param <T>
+ */
 public abstract class LogicalCompositePredicate<T> extends CompositePredicate<T> {
 	
 	private LogicalOperator operator;
