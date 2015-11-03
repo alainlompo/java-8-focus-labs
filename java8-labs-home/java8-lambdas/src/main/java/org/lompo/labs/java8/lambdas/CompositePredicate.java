@@ -21,6 +21,12 @@ public class CompositePredicate<T> {
 	private Predicate<T> predicate;
 	private CompositePredicate<T> andPredicate;
 	
+	/**
+	 * Constructor of the composite predicate. It is made of a predicate and
+	 * another composite predicate.
+	 * @param predicate
+	 * @param andPredicate
+	 */
 	public CompositePredicate(Predicate<T> predicate, CompositePredicate<T> andPredicate) {
 		this.predicate = predicate;
 		this.andPredicate = andPredicate;
@@ -50,6 +56,13 @@ public class CompositePredicate<T> {
 		this.andPredicate = andPredicate;	
 	}
 	
+	/**
+	 * The test method functions recursively in the sense
+	 * that it combines the test methods of the Predicate attribute
+	 * and the CompositePredicate attribute of the current CompositePredicate
+	 * @param t
+	 * @return
+	 */
 	public boolean test(T t) {
 		boolean result = false;
 		result = (this.predicate != null) && (this.predicate.test(t));
@@ -59,6 +72,11 @@ public class CompositePredicate<T> {
 		return result;
 	}
 	
+	/**
+	 * 
+	 * @param clazz
+	 * @return
+	 */
 	public static <U> CompositePredicate<U> getShell(Class<U> clazz) {
 		return new CompositePredicate<U>();
 		

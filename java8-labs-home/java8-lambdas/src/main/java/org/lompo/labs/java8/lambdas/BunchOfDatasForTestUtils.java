@@ -15,6 +15,13 @@ public class BunchOfDatasForTestUtils {
 		random = new Random();
 	}
 	
+	@SafeVarargs
+	/**
+	 * Simple generic method that randomly returns one element from an array
+	 * The index of the target element is randomly picked up
+	 * @param elements
+	 * @return
+	 */
 	public static <T> T oneOf(T...elements) {
 		if (null == elements) {
 			return null;
