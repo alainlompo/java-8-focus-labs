@@ -142,6 +142,10 @@ public class TransactionUtils {
 		
 	}
 	
+	/**
+	 * Returns the transaction that has the smallest amount
+	 * @return
+	 */
 	public static Transaction smallestValueTransaction() {
 		List<Transaction> transactions = getDemoTransactions();
 		Optional<Transaction> result =

@@ -10,6 +10,10 @@ public class ValuesBasedStreams {
 		return Arrays.stream(datas).sum();
 	}
 	
+	/**
+	 * Using Stream.of method to generate a String stream.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Stream<String> helloStream = Stream.of ("Hello", "world", "we", "are", "streaming");
 		helloStream.map(String::toUpperCase)

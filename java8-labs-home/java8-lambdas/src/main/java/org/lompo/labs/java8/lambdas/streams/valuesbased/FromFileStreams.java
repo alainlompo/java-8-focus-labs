@@ -7,6 +7,11 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+/**
+ * This example illustrates how to manipulate streams generated from files.
+ * @author LOMPO
+ *
+ */
 public class FromFileStreams {
 	
 	public static void main(String[] args) throws IOException {
