@@ -1,5 +1,7 @@
 package org.lompo.labs.java8.lambdas.streams.collecting;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
 import java.util.function.BiConsumer;
@@ -7,6 +9,8 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
+import java.util.EnumSet;
+import static java.util.stream.Collector.Characteristics.*;
 
 public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 
@@ -21,14 +25,20 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 
 	@Override
 	public Set<java.util.stream.Collector.Characteristics> characteristics() {
-		// TODO Auto-generated method stub
-		return null;
+		return Collections.unmodifiableSet(EnumSet.of(IDENTITY_FINISH, CONCURRENT));
 	}
 
+	/**
+	 * This methods implements how the accumulators resulting from the
+	 * reduction of subparts of the stream are combined in case the 
+	 * subpart are processed in parallel
+	 */
 	@Override
 	public BinaryOperator<List<T>> combiner() {
-		// TODO Auto-generated method stub
-		return null;
+		return (list1, list2) -> {
+			list1.addAll(list2);
+			return list1;
+		};
 	}
 
 	/**
