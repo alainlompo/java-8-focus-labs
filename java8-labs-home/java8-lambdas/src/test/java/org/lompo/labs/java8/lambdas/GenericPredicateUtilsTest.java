@@ -15,5 +15,26 @@ public class GenericPredicateUtilsTest {
 		assertFalse(utils.isNotNull(testStr));
 		
 	}
+	
+	/**
+	 * The following test fails which tells us that the unit function
+	 * is incorrectly implemented
+	 */
+	@Test
+	public void isInstanceOfTest() {
+		GenericPredicatesUtils<B> utils = new GenericPredicatesUtils<B>();
+		A a = new A();
+		B b = new B();
+		assertTrue(utils.isInstanceOf(b, a));
+		
+	}
+	
+	class A {
+		
+	}
+	
+	class B extends A {
+		
+	}
 
 }
