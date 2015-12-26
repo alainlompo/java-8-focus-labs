@@ -15,6 +15,10 @@ public class Email {
 		this.suffix = suffix;
 	}
 	
+	public String toString() {
+		return prefix+"@" + suffix;
+	}
+	
 	
 	
 }
