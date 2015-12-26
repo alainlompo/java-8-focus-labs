@@ -21,5 +21,18 @@ public class InvoicingService {
 				invoice.getCustomer().get().getBusinessEmail():Optional.empty();
 		
 	}
+	
+	/**
+	 * flatmap helps to flaten the maps that would be otherwise nested
+	 * @param invoice
+	 * @return
+	 */
+	public static Optional<Phone> getContactPersonMainPhone(Invoice invoice) {
+		Optional<Invoice> optInvoice = Optional.ofNullable(invoice);
+		return optInvoice.flatMap(Invoice::getCustomer)
+				.flatMap(Customer::getBusinessContactPerson)
+				.flatMap(Person::getMainPhone);
+				
+	}
 
 }
