@@ -43,13 +43,17 @@ public class Person {
 	public Optional<Phone> getMainPhone() {
 		return mainPhone;
 	}
+	
+	/**
+	 * We don't one the phone to be null so we use Optional.of...
+	 * @param phone
+	 */
+	public void setMainPhone(Phone phone) {
+		this.mainPhone = Optional.of(phone);
+	}
+	
 	public void setMainPhone(Optional<Phone> mainPhone) {
 		this.mainPhone = mainPhone;
 	}
-	
-	
-	
-	
-	
 
 }
