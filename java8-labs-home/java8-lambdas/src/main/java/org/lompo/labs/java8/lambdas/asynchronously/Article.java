@@ -68,6 +68,19 @@ public class Article {
 		return futurePrice;
 	}
 	
+	/**
+	 * This version uses the supplyAsync factory method. It takes
+	 * a Supplier<T> as argument and uses an Executor from the ForkJoinPool
+	 * to execute it.
+	 * @param articleName
+	 * @return
+	 */
+	public Future<Double> getPriceUsingSupplyAsync(String articleName) {
+		return CompletableFuture.supplyAsync(() ->  assessPrice(articleName));
+		
+		
+	}
+	
 	public Future<Double> getUnitPriceAsync() {
 		return getUnitPriceAsync(this.name);
 	}
