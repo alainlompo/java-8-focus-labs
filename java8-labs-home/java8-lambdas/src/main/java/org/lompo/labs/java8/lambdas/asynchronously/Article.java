@@ -46,6 +46,28 @@ public class Article {
 		return futurePrice;
 	}
 	
+	
+	/**
+	 * This version of the getUniPriceAsync method is able to 
+	 * make the client code with the Exception that caused the working thread
+	 * from terminating normally. 
+	 * @param articleName
+	 * @return
+	 */
+	public Future<Double> getUnitPriceAsyncExceptionAble(String articleName) {
+		CompletableFuture<Double> futurePrice = new CompletableFuture<>();
+		new Thread(() -> {
+			try {
+				double price = assessPrice(articleName);
+				futurePrice.complete(price);
+			} catch (Exception ex) {
+				futurePrice.completeExceptionally(ex);
+			}
+			
+		}).start();
+		return futurePrice;
+	}
+	
 	public Future<Double> getUnitPriceAsync() {
 		return getUnitPriceAsync(this.name);
 	}
