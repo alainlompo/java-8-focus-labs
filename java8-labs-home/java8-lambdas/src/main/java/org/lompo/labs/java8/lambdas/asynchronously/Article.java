@@ -13,18 +13,18 @@ public class Article {
 		
 	}
 	
-	private void processArticlePrice() {
+	public void processArticlePrice() {
 		
 		this.unitPrice = assessPrice(this.getName());
 		
 	}
 
-	private double assessPrice(String articleName) {
+	public double assessPrice(String articleName) {
 		
 		// Simulate a time and resource consumming task
 		// That causes a certain amount of delay
 		TimeAndResourceConsumingTaskMock.doTimeAndResourceConsummingTaskMock();
-		return InvoiceUtils.computePrice(getName());
+		return InvoiceUtils.computePrice(articleName);
 		
 	}
 	
@@ -71,15 +71,17 @@ public class Article {
 	/**
 	 * This version uses the supplyAsync factory method. It takes
 	 * a Supplier<T> as argument and uses an Executor from the ForkJoinPool
-	 * to execute it.
+	 * to execute it. This method also propagates the knowledge of the exception
+	 * like getUnitPriceAsyncExceptionAble method
+	 * @see getUnitPriceAsyncExceptionAble
 	 * @param articleName
 	 * @return
 	 */
 	public Future<Double> getPriceUsingSupplyAsync(String articleName) {
-		return CompletableFuture.supplyAsync(() ->  assessPrice(articleName));
-		
-		
+		return CompletableFuture.supplyAsync(() ->  assessPrice(articleName));	
 	}
+	
+	
 	
 	public Future<Double> getUnitPriceAsync() {
 		return getUnitPriceAsync(this.name);
