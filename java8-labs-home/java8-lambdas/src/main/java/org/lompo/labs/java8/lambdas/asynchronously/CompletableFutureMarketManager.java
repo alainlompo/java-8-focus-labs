@@ -2,17 +2,17 @@ package org.lompo.labs.java8.lambdas.asynchronously;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-public abstract class MarketManager {
-	
+public abstract class CompletableFutureMarketManager {
 	private List<EShop> shops;
 	
-	public MarketManager() {
+	public CompletableFutureMarketManager() {
 		shops = new ArrayList<EShop>();
 		setupDefaultShops();
 	}
 	
-	public MarketManager addShop(EShop shop) {
+	public CompletableFutureMarketManager addShop(EShop shop) {
 		shops.add(shop);
 		return this;
 	}
@@ -38,8 +38,11 @@ public abstract class MarketManager {
 		.addShop(es3)
 		.addShop(es4)
 		.addShop(es5);
+		
 	}
 	
-	public abstract List<String> getPricesListOf(String articleName) throws Exception;
+	public abstract List<CompletableFuture<String>> getPricesListOf(String articleName) throws Exception;
+	
+
 
 }
