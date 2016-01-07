@@ -16,6 +16,12 @@ import java.util.function.Predicate;
  */
 public class TypeInference {
 	
+	/**
+	 * Filter the List<T> by the use of the Predicate<T> criteria
+	 * @param peachStore
+	 * @param criteria
+	 * @return
+	 */
 	public static List<Peach> filter(List<Peach> peachStore, Predicate<Peach> criteria) {
 		 
 		// Diamond operator, before java 8 allows some kind of type inference 

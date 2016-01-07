@@ -26,6 +26,13 @@ public abstract class LogicalCompositePredicate<T> extends CompositePredicate<T>
 		
 	}
 
+	/**
+	 * The first argument is a raw predicate while the second one is a CompositePredicate itself
+	 * @see The Chain of command dsign pattern for something similar in implementation
+	 * @param predicate
+	 * @param andPredicate
+	 * @see CompositePredicate<T>
+	 */
 	public LogicalCompositePredicate(Predicate<T> predicate,
 			CompositePredicate<T> andPredicate) {
 		super(predicate, andPredicate);

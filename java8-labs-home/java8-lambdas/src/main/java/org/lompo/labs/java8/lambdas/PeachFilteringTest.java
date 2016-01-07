@@ -6,7 +6,13 @@ import java.util.function.Predicate;
 
 public class PeachFilteringTest {
 	
-	
+	/**
+	 * This method filters out any Peach from the inventory that does
+	 * succeed to be validated by the PeachPredicate
+	 * @param inventory
+	 * @param predicate
+	 * @return
+	 */
 	public static List<Peach> filter(List<Peach> inventory, PeachPredicate predicate) {
 		List<Peach> result = new ArrayList<Peach>();
 		for (Peach p: inventory) {

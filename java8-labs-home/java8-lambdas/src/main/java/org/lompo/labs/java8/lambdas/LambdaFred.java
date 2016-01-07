@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class LambdaFred {
 
+	/**
+	 * Illustrate the use of Lambda to construct a new instance of the Thread class
+	 * This is possible since the Runnable is a functional interface
+	 * @param args
+	 */
 	public static void main(String[] args)  {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("What's your name?");

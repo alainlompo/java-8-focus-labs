@@ -6,6 +6,11 @@ import java.util.Arrays;
 import java.util.List;
 import static org.lompo.labs.java8.lambdas.BunchOfDatasForTestUtils.*;
 
+/**
+ * Bunch of datas for prooving concepts
+ * @author LOMPO
+ *
+ */
 public class TransactionsDataSet {
 	
 	private static final List<String> SOURCE_ACCOUNTS = Arrays.asList(

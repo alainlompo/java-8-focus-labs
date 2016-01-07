@@ -3,6 +3,12 @@ package org.lompo.labs.java8.lambdas;
 import java.util.Comparator;
 
 
+/**
+ * The methods of this class are sample illustration of implementing
+ * the Comparator interface using lambda. 
+ * @author LOMPO
+ *
+ */
 public class LambdaPeachComparators {
 	
 	public static Comparator<Peach> getWeightComparator() {

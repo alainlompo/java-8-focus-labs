@@ -30,16 +30,18 @@ public class BunchOfDatasForTestUtils {
 		return elements[random.nextInt(elements.length)];
 	}
 	
+	/**
+	 * Simple generic method that randomly returns one element from a List<T>
+	 * The index of the returned element is randomly picked up
+	 * @param elements
+	 * @return
+	 * @see <T> T oneOf(T...elements)
+	 */
 	public static <T> T oneOf(List<T> elements) {
 		if (null == elements) {
 			return null;
 		}
 		
-		return elements.get(random.nextInt(elements.size()));
-		
-		
+		return elements.get(random.nextInt(elements.size()));	
 	}
-	
-	
-
 }

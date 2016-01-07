@@ -77,9 +77,4 @@ public class PeachManager {
 	public List<Peach> filterRedPeaches() {
 		return filterPeaches((Peach p) -> "red".equalsIgnoreCase(p.getColor()));
 	}
-	
-	
-	
-	
-
 }
