@@ -31,4 +31,19 @@ public class InvoiceUtils {
 		System.out.println(article2  +", price:" + price2);
 		
 	}
+	
+	/**
+	 * To make things simple we assume that the initial amount on the article
+	 * is greater than any voucher's amount
+	 * @return
+	 */
+	public static double apply (double price, VoucherFamily voucher) {
+		TimeAndResourceConsumingTaskMock.doTimeAndResourceConsummingTaskMock();
+		return price - voucher.getAmount();
+	}
+	
+	public static String applyVoucher(Invoice invoice) {
+		return invoice.E_SHOP_NAME + " / " + invoice.ARTICLE_NAME + " amount after deduction is...." 
+				 + InvoiceUtils.apply(invoice.PRICE, invoice.VOUCHER);
+	}
 }

@@ -1,12 +1,15 @@
 package org.lompo.labs.java8.lambdas.asynchronously;
 
+import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
 public class Article {
 
+	private Random random = new Random();
 	private String name;
 	private double unitPrice;
+	private String eShopName;
 	
 	public Article(String name) {
 		this.name = name;
@@ -102,9 +105,38 @@ public class Article {
 		return unitPrice;
 	}
 
+	public String getUnitPriceWithVoucher(String eShopName) {
+		if (Double.valueOf(unitPrice).compareTo(Double.valueOf(0.0)) == 0 ) {
+			processArticlePrice();
+		}
+		
+		// Simulate that there is a Voucher benefit
+		// Picking it up randomly
+		VoucherFamily voucher = VoucherFamily.values()[
+		                                               random.nextInt(VoucherFamily.values().length)
+		                                               ];
+		
+		return String.format("%s:%s:%.2f:%s",eShopName, name,unitPrice, voucher);
+		
+		
+	}
 	public void setUnitPrice(double unitPrice) {
 		this.unitPrice = unitPrice;
 	}
+
+	public String geteShopName() {
+		return eShopName;
+	}
+
+	public void seteShopName(String eShopName) {
+		this.eShopName = eShopName;
+	}
+
+	public Random getRandom() {
+		return random;
+	}
+	
+	
 	
 	
 	
