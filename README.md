@@ -58,7 +58,7 @@ The following aspects of java 8 enhancements are covered in the examples of the 
   <ul>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/interfaces/defaultmethods'>Java 8 interfaces and default methods</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas'>Core lambda concepts illustrations</a></li>
-    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/utils'>Taking advantage of Optional<T></a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/utils'>Taking advantage of Optional<pre><T></pre> type</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams'>Core streams concepts</a></li>
     
   </ul>
