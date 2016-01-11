@@ -53,3 +53,9 @@ The following aspects of java 8 enhancements are covered in the examples of the 
 <li>more soon...</li>
 </ul>
 </p>
+<p>
+  <h3>Direct access by topics</h3><br/>
+  <ul>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/interfaces/defaultmethods'>Java 8 interfaces and default methods</a></li>
+  </ul>
+</p>
