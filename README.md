@@ -69,6 +69,11 @@ The following aspects of java 8 enhancements are covered in the examples of the 
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams/primitives'>Primitive streams, range and rangeClosed</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams/reducing'>Mapping and reducing</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams/summarization>Stats: summing, averaging, summarizing...</a></li>
-    
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/refactoring'>Refactoring classic code and design patterns</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/optional'>Using Optional types in a stream fashion</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/methodreference'>Usage of method reference</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/fi'>Various illustrations of functional interfaces usage</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/constructorreference'>Illustrating constructor reference</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/asynchronously'>Asynchronous streaming</a></li>
   </ul>
 </p>
