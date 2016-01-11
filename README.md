@@ -60,6 +60,7 @@ The following aspects of java 8 enhancements are covered in the examples of the 
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas'>Core lambda concepts illustrations</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/utils'>Taking advantage of Optional type</a></li>
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams'>Core streams concepts</a></li>
-    
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams/collecting'>Custom usage of collect method (without implementing the Collector interface)</a></li>
+    <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/streams/filtering'>Streams based filtering technics</a></li>
   </ul>
 </p>
