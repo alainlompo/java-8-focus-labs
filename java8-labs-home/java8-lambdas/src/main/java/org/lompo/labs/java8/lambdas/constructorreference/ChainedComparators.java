@@ -6,6 +6,11 @@ import org.lompo.labs.java8.lambdas.Peach;
 import org.lompo.labs.java8.lambdas.PeachManager;
 import static java.util.Comparator.comparing;
 
+/**
+ * Example illustrating chaining comparators
+ * @author LOMPO
+ *
+ */
 public class ChainedComparators {
 	
 	public static void main(String[] args) {

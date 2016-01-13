@@ -4,6 +4,11 @@ import java.util.function.Function;
 
 import org.lompo.labs.java8.lambdas.Peach;
 
+/**
+ * Illustrating constructor reference along with its lambda equivalent
+ * @author LOMPO
+ *
+ */
 public class ConstructorReferenceWithFunction {
 	
 	// Using a constructor reference

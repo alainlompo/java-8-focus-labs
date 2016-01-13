@@ -4,6 +4,12 @@ import java.util.function.BiFunction;
 
 import org.lompo.labs.java8.lambdas.Peach;
 
+/**
+ * Illustrates the uses of constructor reference in BiFunction definitions, along with
+ * its lambda equivalent
+ * @author LOMPO
+ *
+ */
 public class ConstuctorReferenceWithBiFunction {
 	
 	// BiFunction with constructor reference
