@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,6 +25,20 @@ public class BunchOfDatasForTestUtilsTest {
 		assertNotNull(pickedElt);
 		assertTrue(elements.contains(pickedElt));
 	}
+	
+	/**
+	 * This unit test reveals an unhandled use case
+	 * We should fix the method and also treat the case where
+	 * the elements list is not null but is empty
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void oneOf_non_null_empty_elementsList_Test() {
+		List<String> elements = new ArrayList<String>();
+		String pickedElt = BunchOfDatasForTestUtils.oneOf(elements);
+		assertNull(pickedElt);
+	}
+	
+	
 	
 	
 
