@@ -34,7 +34,6 @@ public class ArithmeticExpressionProcessor  {
 			return null;
 		}
 		
-		
 		double operationResult = 0.0D;
 		switch (operator) {
 		case "-": 
@@ -45,6 +44,7 @@ public class ArithmeticExpressionProcessor  {
 			break;
 		case "*":
 			operationResult = leftOperande * rightOperande;
+			break;
 		case "/":
 			if (rightOperande == 0.0D) {
 				operationResult = (leftOperande < 0)? Double.NEGATIVE_INFINITY: Double.POSITIVE_INFINITY;
