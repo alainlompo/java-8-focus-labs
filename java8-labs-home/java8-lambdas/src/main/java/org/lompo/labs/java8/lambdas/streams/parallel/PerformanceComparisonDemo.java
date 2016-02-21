@@ -38,11 +38,7 @@ public class PerformanceComparisonDemo {
 			int n = Integer.parseInt(inputValue);
 			long classicMethodResult = MeasuringParallel.measureProductPerformance(classicMethod, n);
 			long parallelMethodResult = MeasuringParallel.measureProductPerformance(parallelMethod, n);
-			System.out.println("Classic approach finished in " + classicMethodResult + " msecs, while parallel approach finished in " + parallelMethodResult + " msecs ");
-			
-			
-			
-			
+			System.out.println("Classic approach finished in " + classicMethodResult + " msecs, while parallel approach finished in " + parallelMethodResult + " msecs ");	
 		}
 	}
 
