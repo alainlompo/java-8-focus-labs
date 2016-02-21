@@ -16,16 +16,11 @@ public abstract class Volcano<T> {
 		this.keyParameter = keyParameter;
 	}
 	
-	
-	
 	public List<VolcanicActivityObserver<T>> getObservers() {
 		return observers;
 	}
 
-	
 	public abstract void registerObserver(VolcanicActivityObserver<T> observer);
 	public abstract void notifyObservers();
-	
-	
 	
 }
