@@ -34,5 +34,31 @@ public class InvoicingService {
 				.flatMap(Person::getMainPhone);
 				
 	}
+	
+	public static String getContactPersonMainPhoneNumber(Invoice invoice) {
+		Optional<Invoice> optInvoice = Optional.ofNullable(invoice);
+		Optional<String> optNumber =  optInvoice.flatMap(Invoice::getCustomer)
+				.flatMap(Customer::getBusinessContactPerson)
+				.flatMap(Person::getMainPhone)
+				.map(Phone::getPhoneNumber);
+		return optNumber.isPresent()?optNumber.get():"";
+				
+				
+	}
+	
+	/**
+	 * Applying a filter method on Optional<T> similarly to streams
+	 * @param renference
+	 * @param targetInvoice
+	 * @return
+	 */
+	public static Optional<Invoice> ensureReference(String reference, Invoice targetInvoice) {
+		Optional<Invoice> optInvoice = Optional.ofNullable(targetInvoice);
+		return optInvoice.filter(
+				i ->
+				( (reference != null)?reference.equalsIgnoreCase(i.getReference()):false ) );
+	}
+	
+	
 
 }

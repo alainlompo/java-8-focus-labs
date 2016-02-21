@@ -15,5 +15,14 @@ public class Optionality {
 			return Optional.empty();
 		}
 	}
+	
+	public static Optional<Integer> decode(String s) {
+		try {
+			return Optional.of(Integer.decode(s));
+			
+		} catch (NumberFormatException nFE) {
+			return Optional.empty();
+		}
+	}
 
 }
