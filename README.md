@@ -77,3 +77,8 @@ The following aspects of java 8 enhancements are covered in the examples of the 
     <li><a href='https://github.com/alainlompo/java-8-focus-labs/tree/master/java8-labs-home/java8-lambdas/src/main/java/org/lompo/labs/java8/lambdas/asynchronously'>Asynchronous streaming</a></li>
   </ul>
 </p>
+<p>
+  <h3>Retro - lambda</h3>
+  <br/>
+  Esko Luontola build a great tool he called retrolambda. It allows you to compile your java 8 sources to a java 1.7 jvm and even older versions. This is great because a lot of customers won't migrate so easily to java 8: I am particularly thinking about banks, insurance companies, etc. Thanks to retro lambda you can still use the amazing features of java 8 such as lambda and delivers an app that runs on java 1.7 or 1.6. You can find more about retrolambda <a href='https://github.com/orfjackal/retrolambda'>here</a>
+</p>
