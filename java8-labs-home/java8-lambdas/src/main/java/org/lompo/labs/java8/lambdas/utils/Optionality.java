@@ -26,5 +26,23 @@ public class Optionality {
 			return Optional.empty();
 		}
 	}
-
+	
+	// Sample illustration of the Optional.ifPresent method
+	public static void displayValueWithAMessage(String message, Optional<Integer> valueContainer, java.io.OutputStream outStream) {
+		
+		if (valueContainer == null) {
+			return;
+		}
+		
+		OutputStreamWriter streamWriter = new OutputStreamWriter(outStream);
+		BufferedWriter bufferedWriter  = new BufferedWriter(streamWriter);
+		valueContainer.ifPresent(i -> {
+			try {
+				bufferedWriter.write(String.format(message + " %1$d", i));
+				bufferedWriter.flush();
+			} catch (IOException ex) {
+				
+			}
+		});
+	}
 }
