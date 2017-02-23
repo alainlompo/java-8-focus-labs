@@ -12,6 +12,8 @@ public class Optionality {
 			return Optional.of(Integer.parseInt(s));
 			
 		} catch (NumberFormatException nFE) {
+			// A non integer text value would trigger a number format exception, therefore we should intercept it
+			// And send an Optional.empty() result
 			return Optional.empty();
 		}
 	}
